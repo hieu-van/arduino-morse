@@ -2,7 +2,7 @@ const byte pinNum = 2;
 // Dot duration in milliseconds
 const unsigned long dur = 80;
 // Interval between transmissions in milliseconds
-const unsigned long interval = 10000;
+const unsigned long interval = 5000;
 const String msg = "SOS";
 
 String charToMorse(const char ch) {
@@ -82,6 +82,42 @@ String charToMorse(const char ch) {
 			return "---..";
 		case '9':
 			return "----.";
+		case '.':
+			return ".-.-.-";
+		case ',':
+			return "--..--";
+		case '?':
+			return "..--..";
+		case '\'':
+			return ".----.";
+		case '!':
+			return "-.-.--";
+		case '/':
+			return "-..-.";
+		case '(':
+			return "-.--.";
+		case ')':
+			return "-.--.-";
+		case '&':
+			return ".-...";
+		case ':':
+			return "---...";
+		case ';':
+			return "-.-.-.";
+		case '=':
+			return "-...-";
+		case '+':
+			return ".-.-.";
+		case '-':
+			return "-....-";
+		case '_':
+			return "..--.-";
+		case '"':
+			return ".-..-.";
+		case '$':
+			return "..._.._";
+		case '@':
+			return ".--.-.";
 	}
 }
 
