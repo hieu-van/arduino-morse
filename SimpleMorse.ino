@@ -1,6 +1,8 @@
 const byte pinNum = 2;
 // Dot duration in milliseconds
 const unsigned long dur = 80;
+// Interval between transmissions in milliseconds
+const unsigned long interval = 10000;
 const String msg = "SOS";
 
 String charToMorse(const char ch) {
@@ -120,7 +122,8 @@ void emitMorse(const String msg) {
 			digitalWrite(pinNum, HIGH);
 			delay(dur);
 			digitalWrite(pinNum, LOW);
-		} else {
+		} 
+		else {
 			// Signal off
 			digitalWrite(pinNum, LOW);
 			delay(dur);
@@ -131,9 +134,9 @@ void emitMorse(const String msg) {
 void setup() {
 	pinMode(pinNum, OUTPUT);
 	digitalWrite(pinNum, LOW);
-
-	emitMorse(msg);
 }
 
 void loop() {
+	emitMorse(msg);
+	delay(interval);
 }
