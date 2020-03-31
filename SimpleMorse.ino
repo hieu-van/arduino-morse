@@ -103,7 +103,7 @@ String strToSignal(const String msg) {
 				}
 				signal += "0";
 			}
-			if (i != msg.length() - 1)
+			if (i != (msg.length() - 1))
 				signal += "000";
 		}
 	}
